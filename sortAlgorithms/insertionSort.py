@@ -1,3 +1,6 @@
+import random
+import time
+
 def insertion_sort(liste):
     # Wir gehen davon aus, dass das erste Element (Index 0) bereits "sortiert" ist.
     # Daher starten wir mit dem zweiten Element (Index 1).
@@ -17,6 +20,12 @@ def insertion_sort(liste):
 
     # Hinweis: Die Funktion verändert die ursprüngliche Liste direkt (in-place).
 
-liste = [5,2,4,1,3]
+amount = 10000 
+liste = [random.randint(0,100) for _ in range(amount)] 
+
+start = time.process_time()
 insertion_sort(liste)
-print(liste)
+end = time.process_time()
+print('Benötigte Zeit des InsertionSort für '+str(amount)+' Elemente: ' + str((end - start)) + ' Sekunden' )                
+insertion_sort(liste)
+
