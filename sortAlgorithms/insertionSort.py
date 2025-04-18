@@ -16,3 +16,7 @@ def insertion_sort(liste):
         liste[j + 1] = aktuelles_element  # Einfügen des aktuellen Elements an der richtigen Stelle
 
     # Hinweis: Die Funktion verändert die ursprüngliche Liste direkt (in-place).
+
+liste = [5,2,4,1,3]
+insertion_sort(liste)
+print(liste)
